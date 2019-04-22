@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title of the document</title>
+</head>
+
+<body>
+<style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+    .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+    .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+    .tg .tg-uys7{border-color:inherit;text-align:center}
+</style>
+<h1>Basics</h1>
+<h3>4. Fitness Rates</h3>
+<p>----------------</p>
+<br>
+<p>Write a JS function that calculates how much money you need to visit
+your favorite gym. You will receive two strings for a day of week and a
+service which you want to use and a number for the time in which you can
+    go to the gym.</p>
+
+<p>In the table below you can find information about the prices and services offered at the gym.</p>
+<table class="tg">
+    <tr>
+        <th class="tg-uys7"><br>&nbsp;&nbsp;Service <br>&nbsp;&nbsp;</th>
+        <th class="tg-uys7"><br>&nbsp;&nbsp;Fitness<br>&nbsp;&nbsp;</th>
+        <th class="tg-uys7"><br>  Fitness<br></th>
+        <th class="tg-c3ow"> Sauna<br></th>
+        <th class="tg-c3ow"><br>&nbsp;&nbsp;&nbsp;&nbsp;Sauna</th>
+        <th class="tg-c3ow"><br>Instructor</th>
+        <th class="tg-c3ow"><br>Instructor</th>
+    </tr>
+    <tr>
+        <td class="tg-uys7"><br>&nbsp;&nbsp;Hours<br>&nbsp;&nbsp;</td>
+        <td class="tg-uys7"><br>&nbsp;&nbsp;8.00-15.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-uys7"><br>&nbsp;&nbsp;15.00-22.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;8.00-15.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;15.00-22.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;8.00-15.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;15.00-22.00<br>&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="tg-uys7"><br>&nbsp;&nbsp;Monday<br>&nbsp;&nbsp;</td>
+        <td class="tg-uys7"><br>&nbsp;&nbsp;5.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-uys7"><br>&nbsp;&nbsp;7.50<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;4.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;6.50<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;10.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;12.50<br>&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="tg-uys7"><br>&nbsp;&nbsp;Tuesday<br>&nbsp;&nbsp;</td>
+        <td class="tg-uys7"><br>&nbsp;&nbsp;5.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-uys7"><br>&nbsp;&nbsp;7.50<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;4.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;6.50<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;10.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;12.50<br>&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;Wednesday<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;5.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;7.50<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;4.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;6.50<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;10.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;12.50<br>&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;Thursday<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;5.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;7.50<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;4.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;6.50<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;10.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;12.50<br>&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;Friday<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;5.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;7.50<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;4.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;6.50<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;10.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;12.50<br>&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;Saturday<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;8.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;8.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;7.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;7.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;15.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;15.00<br>&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;Sunday<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;8.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;8.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;7.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;7.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;15.00<br>&nbsp;&nbsp;</td>
+        <td class="tg-c3ow"><br>&nbsp;&nbsp;15.00<br>&nbsp;&nbsp;</td>
+    </tr>
+</table>
+<p><b>Example:</b> If you want to go to the gym on Monday at 15 o`clock and use the sauna
+    you have to pay 4.00 leva.
+    The input comes as three arguments passed to your function.
+    The output should be printed to the console.</p>
+<h3>Example</h3>
+<table class="tg">
+    <tr>
+        <th class="tg-lkj2"><br>&nbsp;&nbsp;Input<br>&nbsp;&nbsp;</th>
+        <th class="tg-s268"><br>&nbsp;&nbsp;Output<br>&nbsp;&nbsp;</th>
+    </tr>
+    <tr>
+        <td class="tg-s268"><br>  'Monday', 'Sauna', 15.30<br>  </td>
+        <td class="tg-s268"><br>&nbsp;&nbsp;6.5<br>&nbsp;&nbsp;</td>
+    </tr>
+</table>
+<br>
+<table class="tg">
+    <tr>
+        <th class="tg-s268"><br>&nbsp;&nbsp;Input<br>&nbsp;&nbsp;</th>
+        <th class="tg-s268"><br>&nbsp;&nbsp;Output<br>&nbsp;&nbsp;</th>
+    </tr>
+    <tr>
+        <td class="tg-s268"><br>  'Sunday', 'Fitness', 22.00<br>  </td>
+        <td class="tg-s268"><br>&nbsp;&nbsp;8<br>&nbsp;&nbsp;</td>
+    </tr>
+</table>
+<h3>05. Greatest Common Divisor &ndash; GCD</h3>
+<p>Write a JS function that takes two positive numbers as input and compute the greatest common divisor.</p>
+<p>Print on the console the result.</p>
+<p>The input comes as two positive integer numbers.</p>
+<p>The output should be printed to the console.</p>
+<h3>Example:</h3>
+<table class="tg">
+    <tr>
+        <th class="tg-s268"><br>&nbsp;&nbsp;Input<br>&nbsp;&nbsp;</th>
+        <th class="tg-s268"><br>&nbsp;&nbsp;Output<br>&nbsp;&nbsp;</th>
+        <th class="tg-0lax"><br>&nbsp;&nbsp; <br>&nbsp;&nbsp;</th>
+        <th class="tg-0lax"><br>&nbsp;&nbsp;Input<br>&nbsp;&nbsp;</th>
+        <th class="tg-0lax"><br>&nbsp;&nbsp;Output<br>&nbsp;&nbsp;</th>
+    </tr>
+    <tr>
+        <td class="tg-s268"><br>&nbsp;&nbsp;15, 5<br>&nbsp;&nbsp;</td>
+        <td class="tg-s268"><br>&nbsp;&nbsp;5<br>&nbsp;&nbsp;</td>
+        <td class="tg-0lax"><br>&nbsp;&nbsp; <br>&nbsp;&nbsp;</td>
+        <td class="tg-0lax"><br>&nbsp;&nbsp;2154, 458<br>&nbsp;&nbsp;</td>
+        <td class="tg-0lax"><br>&nbsp;&nbsp;2<br>&nbsp;&nbsp;</td>
+    </tr>
+</table>
+<h3>6.	Same Numbers</h3>
+<p>Write a JS function that takes <strong>an integer</strong> <strong>number</strong> as input and check if all the digits in a given number are the same or not.Print on the console <strong>true</strong> if all numbers are same or <strong>false</strong> if not. On the next line print the <strong>sum of all the digits.</strong></p>
+<p>The <strong>input</strong> comes as an integer number.</p>
+<p>The <strong>output</strong> should be printed to the console.</p>
+<br>
+<h3>Example:</h3>
+<table class="tg">
+    <tr>
+        <th class="tg-s268"><br>&nbsp;&nbsp;Input<br>&nbsp;&nbsp;</th>
+        <th class="tg-s268"><br>&nbsp;&nbsp;Output<br>&nbsp;&nbsp;</th>
+        <th class="tg-0lax"><br>&nbsp;&nbsp; <br>&nbsp;&nbsp;</th>
+        <th class="tg-0lax"><br>&nbsp;&nbsp;Input<br>&nbsp;&nbsp;</th>
+        <th class="tg-0lax"><br>&nbsp;&nbsp;Output<br>&nbsp;&nbsp;</th>
+    </tr>
+    <tr>
+        <td class="tg-s268"><br>&nbsp;&nbsp;15, 5<br>&nbsp;&nbsp;</td>
+        <td class="tg-s268"><br>&nbsp;&nbsp;5<br>&nbsp;&nbsp;</td>
+        <td class="tg-0lax"><br>&nbsp;&nbsp; <br>&nbsp;&nbsp;</td>
+        <td class="tg-0lax"><br>&nbsp;&nbsp;2154, 458<br>&nbsp;&nbsp;</td>
+        <td class="tg-0lax"><br>&nbsp;&nbsp;2<br>&nbsp;&nbsp;</td>
+    </tr>
+</table>
+<h3>7.	Time to Walk</h3>
+<p>Write a JS function that <strong>calculates</strong> how long it takes a student to get to the university. <br /> The function takes <strong>three numbers</strong>:</p>
+<ul>
+    <li>The <strong>first</strong> is the number of <strong>steps</strong> the student makes from his home to the university</li>
+    <li>Тhe <strong>second</strong> number is the length of the student's footprint in <strong>meters</strong></li>
+    <li>Тhe <strong>third</strong> number is the student speed in <strong>km/h</strong></li>
+</ul>
+<p>Sometimes the student needs a rest. Every 500 meters, the person makes a <strong>1 minute break</strong>.</p>
+<p>Calculate how long the student goes from home to university and print on the console the result as follows: <strong>'hours:minutes:seconds'</strong>.</p>
+<p>The <strong>input</strong> comes as <strong>three numbers</strong>.</p>
+<p>The <strong>output</strong> should be printed to the console.</p>
+<h3>Example:</h3>
+<table class="tg">
+    <tr>
+        <th class="tg-s268"><br>&nbsp;&nbsp;Input<br>&nbsp;&nbsp;</th>
+        <th class="tg-s268"><br>&nbsp;&nbsp;Output<br>&nbsp;&nbsp;</th>
+        <th class="tg-0lax"><br>&nbsp;&nbsp; <br>&nbsp;&nbsp;</th>
+        <th class="tg-0lax"><br>&nbsp;&nbsp;Input<br>&nbsp;&nbsp;</th>
+        <th class="tg-0lax"><br>&nbsp;&nbsp;Output<br>&nbsp;&nbsp;</th>
+    </tr>
+    <tr>
+        <td class="tg-s268"><br>&nbsp;&nbsp;4000, 0.60, 5<br>&nbsp;&nbsp;</td>
+        <td class="tg-s268"><br>&nbsp;&nbsp;00:32:48<br>&nbsp;&nbsp;</td>
+        <td class="tg-0lax"><br>&nbsp;&nbsp; <br>&nbsp;&nbsp;</td>
+        <td class="tg-0lax"><br>  2564, 0.70, 5.5<br>  </td>
+        <td class="tg-0lax"><br>&nbsp;&nbsp;00:22:35<br>&nbsp;&nbsp;</td>
+    </tr>
+</table>
+<h3>8.	Flight Timetable</h3>
+<p>Write a JS function that displays flight information.</p>
+<p>The <strong>input</strong> comes as an <strong>array of string elements</strong>.</p>
+<ul>
+    <li>The first string can be <strong>'Arrivals' </strong>or <strong>'Departures'</strong></li>
+    <li>The second string is the <strong>name</strong> of the town</li>
+    <li>The third is the <strong>time</strong> when the plain departures or arrives</li>
+    <li>The fourth is the <strong>flight number</strong></li>
+    <li>The last one is the <strong>gate number</strong></li>
+</ul>
+<p>The <strong>output</strong> should be printed to the console in the following format:</p>
+<p>&ldquo;Departures/Arrivals: Destination - {town}, Flight - {flight number}, &nbsp;Time - {departure/arrival time}, Gate - {gate number}&rdquo;</p>
+<h3>Example:</h3>
+<table class="tg">
+    <tr>
+        <th class="tg-s268"><br>&nbsp;&nbsp;Input<br>&nbsp;&nbsp;</th>
+        <th class="tg-s268"><br>&nbsp;&nbsp;Output<br>&nbsp;&nbsp;</th>
+    </tr>
+    <tr>
+        <td class="tg-s268"><br>&nbsp;&nbsp;['Departures',<br>&nbsp;&nbsp;'London', '22:45', 'BR117', '42']<br>&nbsp;&nbsp;</td>
+        <td class="tg-s268"><br>&nbsp;&nbsp;Departures: Destination – London, Flight – BR117, Time – 22:45, Gate -<br>&nbsp;&nbsp;42<br>&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="tg-0lax"><br>&nbsp;&nbsp;['Arrivals',<br>&nbsp;&nbsp;'Paris', '02:22', 'VD17', '3']<br>&nbsp;&nbsp;</td>
+        <td class="tg-0lax"><br>&nbsp;&nbsp;Arrivals: Destination – Paris, <br>&nbsp;&nbsp;Flight – VD17, Time – 02:22, Gate - 3<br>&nbsp;&nbsp;</td>
+    </tr>
+</table>
+<h3>9.	Calorie Object</h3>
+<p>Write a JS function that composes an object by given properties. Every even index of the array is the string and the name of the food. Every odd index is a number that is equal to the calories in 100 grams of product. Assign each value to its respective property of an object and print it on the console.</p>
+<p>The <strong>input</strong> comes as an <strong>array of string</strong> <strong>elements</strong>.</p>
+<p>The <strong>output</strong> should be printed to the console.</p>
+<h3>Examples:</h3>
+<table class="tg">
+    <tr>
+        <th class="tg-s268"><br>&nbsp;&nbsp;Input<br>&nbsp;&nbsp;</th>
+        <th class="tg-s268"><br>&nbsp;&nbsp;Output<br>&nbsp;&nbsp;</th>
+    </tr>
+    <tr>
+        <td class="tg-s268"><br>&nbsp;&nbsp;['Yoghurt',<br>&nbsp;&nbsp;48, 'Rise', 138, 'Apple', 52]<br>&nbsp;&nbsp;</td>
+        <td class="tg-s268"><br>&nbsp;&nbsp;{ Yoghurt: 48, Rise: 138, Apple: 52 }<br>&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="tg-0lax"><br>&nbsp;&nbsp;['Potato', 93,<br>&nbsp;&nbsp;'Skyr', 63, 'Cucumber', 18, 'Milk', 42]<br>&nbsp;&nbsp;</td>
+        <td class="tg-0lax"><br>&nbsp;&nbsp;{ Potato: 93, Skyr: 63, Cucumber: 18, Milk: 42 }<br>&nbsp;&nbsp;</td>
+    </tr>
+</table>
+<h3>10.	*Coffee Machine</h3>
+<p>Write a program for a coffee machine. Calculate whether the money inserted in the machine is enough to make the order and print the corresponding output.<br /> </p>
+<h3>Input</h3>
+<p>The input is an <strong>array of strings</strong>. Each string represents one order with different parts, separated by a single space &nbsp;<strong>' '</strong>.</p>
+<ul>
+    <li>The <strong>first part</strong> is the <strong>coins inserted</strong>.</li>
+    <li>The <strong>second</strong> is the <strong>type of drink </strong>(<strong>coffee or tea</strong>).</li>
+    <li>Next, if the drink type is <strong>coffee</strong>, you will receive <strong>'caffeine'</strong> or <strong>'decaf'</strong>.</li>
+    <li>Next, you may receive <strong>'milk', </strong>if the ordered drink is with milk. <strong>It costs</strong> <strong>10% of the drink price, rounded to first decimal point</strong></li>
+    <li>And <strong>last</strong> you receive the <strong>quantity of sugar, between 0 and 5</strong>. <strong>No matter the quantity (except from 0) it costs 0.10. Add the sugar at the end!</strong></li>
+</ul>
+<p>&nbsp;</p>
+<p>The <strong>prices of drinks</strong> are:</p>
+<table class="tg">
+    <tr>
+        <th class="tg-s268"><br>&nbsp;&nbsp;Type<br>&nbsp;&nbsp;</th>
+        <th class="tg-s268"><br>&nbsp;&nbsp;Price<br>&nbsp;&nbsp;</th>
+    </tr>
+    <tr>
+        <td class="tg-s268"><br>&nbsp;&nbsp;coffee caffeine<br>&nbsp;&nbsp;</td>
+        <td class="tg-s268"><br>&nbsp;&nbsp;0.80<br>&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="tg-0lax"><br>&nbsp;&nbsp;coffee decaf<br>&nbsp;&nbsp;</td>
+        <td class="tg-0lax"><br>&nbsp;&nbsp;0.90<br>&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="tg-0lax"><br>&nbsp;&nbsp;tea<br>&nbsp;&nbsp;</td>
+        <td class="tg-0lax"><br>&nbsp;&nbsp;0.80<br>&nbsp;&nbsp;</td>
+    </tr>
+</table>
+<h3>Constrains</h3>
+<ul>
+    <li>The input will always be</li>
+</ul>
+<h3>Output</h3>
+<p>For each order there are <strong>two possible</strong> outputs:</p>
+<ul>
+    <li>If the money inserted is enough, calculate the change of the order:</li>
+</ul>
+<p><strong>'You ordered {drink}. Price: {price}$ Change: {change}$'</strong></p>
+<ul>
+    <li>If the money is not enough:</li>
+</ul>
+<p><strong>'Not enough money for {drink}. Need {moneyNeeded}$ more'<br /> <br /> </strong></p>
+<p>After proceeding all orders, print the <strong>total money earned</strong> from the <strong>successful</strong> orders in the format: <strong>'Income Report: {totalMoney}$'</strong></p>
+<p>&nbsp;</p>
+<p>All of the numbers should be <strong>formatted to the second decimal point</strong>.</p>
+<p>&nbsp;</p>
+<h3>Example:</h3>
+<table class="tg">
+    <tr>
+        <th class="tg-s268"><br>&nbsp;&nbsp;Input<br>&nbsp;&nbsp;</th>
+        <th class="tg-s268"><br>&nbsp;&nbsp;Output<br>&nbsp;&nbsp;</th>
+    </tr>
+    <tr>
+        <td class="tg-s268"><br>&nbsp;&nbsp;['1.00,<br>&nbsp;&nbsp;coffee, caffeine, milk, 4', '0.40, tea, milk, 2',<br>&nbsp;&nbsp;'1.00,<br>&nbsp;&nbsp;coffee, decaf, 0']<br>&nbsp;&nbsp;</td>
+        <td class="tg-s268"><br>&nbsp;&nbsp;You<br>&nbsp;&nbsp;ordered coffee. Price: 1.00$ Change: 0.00$<br>&nbsp;&nbsp;Not<br>&nbsp;&nbsp;enough money for tea. Need 0.60$ more.<br>&nbsp;&nbsp;You<br>&nbsp;&nbsp;ordered coffee. Price: 0.90$ Change: 0.10$<br>&nbsp;&nbsp;Income<br>&nbsp;&nbsp;Report: 1.90$<br>&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="tg-0lax"><br>&nbsp;&nbsp;Comments<br>&nbsp;&nbsp;</td>
+        <td class="tg-0lax"></td>
+    </tr>
+    <tr>
+        <td class="tg-0lax"><br>&nbsp;&nbsp;The<br>&nbsp;&nbsp;first order is coffee with caffeine, milk and sugar. The price of the drink<br>&nbsp;&nbsp;is 0.80$, we calculate the milk, 10% of the price, rounded to the first<br>&nbsp;&nbsp;decimal point - 0.1$, and we add the sugar =&gt; 0.80 + 0.10 + 0.10 = 1.00.<br>&nbsp;&nbsp;The<br>&nbsp;&nbsp;second order is tea with milk and sugar (0.80 + 0.10 + 0.10 = 1.00), but the<br>&nbsp;&nbsp;money inserted is not enough.<br>&nbsp;&nbsp;Next,<br>&nbsp;&nbsp;we receive order for coffee decaf with no milk and 0 sugar =&gt; 0.90$. The<br>&nbsp;&nbsp;change is 0.10$.<br>&nbsp;&nbsp;Total<br>&nbsp;&nbsp;income = 1.90<br>&nbsp;&nbsp;</td>
+        <td class="tg-0lax"></td>
+    </tr>
+    <tr>
+        <td class="tg-0lax"><br>&nbsp;&nbsp;Input<br>&nbsp;&nbsp;</td>
+        <td class="tg-0lax"><br>&nbsp;&nbsp;Output<br>&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="tg-0lax"><br>&nbsp;&nbsp;['8.00,<br>&nbsp;&nbsp;coffee, decaf, 4',<br>&nbsp;&nbsp;'1.00,<br>&nbsp;&nbsp;tea, 2']<br>&nbsp;&nbsp;</td>
+        <td class="tg-0lax"><br>&nbsp;&nbsp;You<br>&nbsp;&nbsp;ordered coffee. Price: 1.00$ Change: 7.00$<br>&nbsp;&nbsp;You<br>&nbsp;&nbsp;ordered tea. Price: 0.90$ Change: 0.10$<br>&nbsp;&nbsp;Income<br>&nbsp;&nbsp;Report: 1.90$<br>&nbsp;&nbsp;</td>
+    </tr>
+</table>
+</body>
+
+</html>
