@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #ul {
+
+        }
+        div {
+            display: block;
+            padding-left: 45%;
+        }
+        button {
+            margin-left: 45%;
+        }
+        li a {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+        li a.colors {
+            background-color: #4CAF50;
+            color: white;
+        }
+        li a:hover:not(.colors) {
+            background-color: #555;
+            color: white;
+        }
+        #divEl{
+            width: 100%;
+            background-color: cyan;
+        }
+        #navBar{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 200px;
+            background-color: #f1f1f1;
+            position:fixed;
+        }
+        img {
+            width:100%;
+            hight:100px;
+        }
+        #siblings{
+            margin-left: 45%;
+        }
+        #margin{
+            margin-left: 30%;
+        }
+        .buttonClass{
+            display: inline-block;
+            margin:0;
+        }
+        #firChild{
+            color: deepskyblue;
+            text-align: center;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-color:slategray">
+
+<ul id="navBar" >
+    <li><a class = "colors" href="#title">Title</a></li>
+    <li><a href="#divEl">Parents</a></li>
+    <li><a href="#ulID">Children</a></li>
+    <li><a href="#siblings">Siblings</a></li>
+</ul>
+
+<img src="https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2018/1-space.jpg" alt="Universe">
+
+<h1 id="title" style="text-align:center;">Let's begin :)</h1>
+
+<img src="https://futurism.com/wp-content/uploads/2014/02/cosmos-1472x621.png" alt="Universe">
+
+<div id="divEl">
+    <p id="append">Some Text</p>
+</div>
+<button onclick="appendFunction()">Click Me!</button>
+
+<img src="https://d2r55xnwy6nx47.cloudfront.net/uploads/2018/09/gas_1300Lede.jpg" alt="Universe">
+
+
+
+<div class="coolClass">
+    <ul id="ulID">
+
+    </ul>
+</div>
+
+<button onclick="childrenFunction()">Click me to create a clone!</button>
+<button onclick="removeFunction()">Click me to kill a clone!</button>
+
+<img src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F754376212%2F960x0.jpg%3Ffit%3Dscale" alt="Universe">
+
+<h3 style="text-align:center; color:darkgrey">V Your choices V</h3>
+<p id="firChild"></p>
+
+<ul id="siblings" style="list-style-type: none;"><li id="firstChi">Mily Way</li><li id="secChi">Whirlpool Galaxy</li><li>Andromeda</li><li>Pinwheel Galaxy</li><li id="preSib">Tadpole Galaxy</li><li id="prElSib">Hoag's Object</li></ul>
+<button class="buttonClass" id="margin" onclick="firstChildren()">firstChild</button>
+<button class="buttonClass" onclick="nextSibl()">nextSibling</button>
+<button class="buttonClass" onclick="nextEleSib()">nextElementSibling</button>
+<button class="buttonClass" onclick="prevSib()">previousSibling</button>
+<button class="buttonClass" onclick="prevEleSib()">previousElementSIbling</button>
+<button class="buttonClass" onclick="lastChill()">lastChild</button>
+
+<h2 style="color: firebrick; text-align: center;">The End</h2>
+
+<script>
+    function appendFunction() {
+        var remEl = document.getElementById("divEl");
+        var x = document.getElementById("append").parentNode;
+        var appEnd = document.createElement("p");
+        var someText = document.createTextNode("This text and background has changed thanks to JS!");
+
+
+        remEl.removeChild(remEl.childNodes[1]);
+
+        x.appendChild(appEnd);
+
+        appEnd.appendChild(someText);
+
+
+        x.style.color = "yellow";
+        x.style.backgroundColor = "violet";
+
+    }
+
+    function childrenFunction(){
+        var newEl = document.createElement("ol");
+        var otherText = document.createTextNode("Hi, I'm a clone!");
+
+        newEl.appendChild(otherText);
+        var clone = document.getElementById("ulID");
+        clone.insertBefore(newEl, clone.childNodes[0]);
+    }
+
+    function removeFunction(){
+        var rem = document.getElementById("ulID");
+        rem.firstElementChild.remove();
+    }
+    function firstChildren(){
+        var fiChild = document.getElementById("siblings").firstChild.innerHTML;
+        document.getElementById("firChild").innerHTML = fiChild;
+    }
+    function nextSibl(){
+        var nextSib = document.getElementById("firstChi").nextSibling.innerHTML;
+        document.getElementById("firChild").innerHTML = nextSib;
+    }
+    function nextEleSib() {
+        var nextElSib = document.getElementById("secChi").nextElementSibling.innerHTML;
+        document.getElementById("firChild").innerHTML = nextElSib;
+    }
+    function prevSib() {
+        var prevSibli = document.getElementById("preSib").previousSibling.innerHTML;
+        document.getElementById("firChild").innerHTML = prevSibli;
+    }
+    function prevEleSib() {
+        var preElSib = document.getElementById("prElSib").previousElementSibling.innerHTML;
+        document.getElementById("firChild").innerHTML = preElSib;
+    }
+    function lastChill(){
+        var lastChi = document.getElementById("siblings").lastChild.innerHTML;
+        document.getElementById("firChild").innerHTML = lastChi;
+    }
+
+</script>
+</body>
+</html>
